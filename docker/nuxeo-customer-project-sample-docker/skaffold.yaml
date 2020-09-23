@@ -12,7 +12,7 @@ build:
     envTemplate:
       template: "{{.DOCKER_REGISTRY}}/{{.ORG}}/{{.IMAGE_NAME}}:{{.VERSION}}"
   artifacts:
-    - image: nuxeo-customer-project-sample-docker
+    - image: nuxeo-customer-project-sample
       context: docker/nuxeo-customer-project-sample-docker
       kaniko:
         dockerfile: Dockerfile
@@ -26,7 +26,7 @@ build:
           CLID: "{{.CLID}}"
           PACKAGES: "jenkins_pub-SANDBOX"
         cache:
-          repo: ${DOCKER_REGISTRY}/${ORG}/nuxeo-customer-project-sample-docker/cache
+          repo: ${DOCKER_REGISTRY}/${ORG}/nuxeo-customer-project-sample/cache
   cluster:
     namespace: platform
     dockerConfig:
