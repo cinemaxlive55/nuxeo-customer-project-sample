@@ -19,7 +19,7 @@ COPY --chown=900:0 target/nuxeo-customer-project-sample-package-*.zip /local-pac
 # Workaround of above permission issues, otherwise we can't clean the package once installed
 USER root
 RUN /install-local-packages.sh /local-packages
-RUN /install-packages.sh --clid ${CLID} ${PACKAGES}
+# RUN /install-packages.sh --clid ${CLID} ${PACKAGES}
 RUN chown -R 900:0 ${NUXEO_HOME} \
   && chmod -R g+rwX ${NUXEO_HOME}
 USER 900
