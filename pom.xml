@@ -18,6 +18,7 @@
     <nuxeo.skip.enforcer>true</nuxeo.skip.enforcer>
     <studio.project.version>0.0.0-SNAPSHOT</studio.project.version>
     <nuxeo.target.version>11.*</nuxeo.target.version>
+    <nuxeo.image.version>11.2</nuxeo.image.version>
   </properties>
 
   <modules>
